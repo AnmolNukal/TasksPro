@@ -1,23 +1,25 @@
 import styled from "styled-components";
 
-function Hero() {
+function Search() {
     return <Container>
         <div className="searchDateSettings">
-            <input className="search" type="text" placeholder="   Search" />
+            <input className="search" type="text" placeholder="Search" />
             <span>December 11 2021 %</span>
         </div>
     </Container >
 }
 
 const Container = styled.div`
-    width: 80%;
-    margin: 0 0 0 20%;
-    background-color: gray;
     .searchDateSettings{
         display: flex;
         justify-content: space-between;
-        padding-top:4rem;
-        padding:4rem 8rem;
+        padding:3rem 4em 2rem 4rem;
+        @media (max-width:786px){
+           
+        }
+    }
+    @media (max-width:786px){
+        margin:0;
     }
     .search{
         width: 50%;
@@ -27,4 +29,4 @@ const Container = styled.div`
     }
 `
 
-export default Hero
+export default Search;

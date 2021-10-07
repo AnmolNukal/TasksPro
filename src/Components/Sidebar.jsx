@@ -2,21 +2,29 @@ import styled from "styled-components";
 import { useState } from "react"
 
 function Sidebar() {
-
-
+    const [active, setActive] = useState();
+    const [sidebar, changeSidebar] = useState(true);
+    const items = [
+        { title: "Dashboard", icon: "fas fa-home" },
+        { title: "My Task", icon: "fas fa-check-circle" },
+        { title: "Message", icon: "fas fa-envelope" },
+        { title: "Notification", icon: "fas fa-bell" },
+        { title: "Statistics", icon: "fas fa-chart-bar" },
+        { title: " My File", icon: "fas fa-folder-open" }
+    ]
     return <div>
         <Container>
             <div className="logo"> Rightwork</div>
             <div className="sidebarItems">
-                <ul>
-                    <li ><i class="fas fa-home"></i> Dashboard</li>
-                    <li ><i class="fas fa-check-circle"> </i>  My Task</li>
-                    <li ><i class="fas fa-envelope"></i> Message</li>
-                    <li ><i class="fas fa-bell"></i> Notification</li>
-                    <li ><i class="fas fa-chart-bar"></i> Statistics</li>
-                    <li ><i class="fas fa-folder-open"></i> My File</li>
-                </ul>
+                {
+                    items.map((item, index) => {
+                        return <div onClick={() => { setActive(index); }} className={active === index ? "active item" : "item"}>
+                            <i className={item.icon}></i>{item.title}
+                        </div>
+                    })
+                }
             </div>
+            <span onClick={() => changeSidebar(!sidebar)} className="exit"><i class="fas fa-sign-out-alt"></i></span>
         </Container>
     </div >
 
@@ -25,19 +33,23 @@ function Sidebar() {
 const Container = styled.div`
     background-color: #e9e9e9;
     color:black;
-    width:20%;
     height: 100vh;
-    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    li{
-        list-style-type : none;
-        padding: 1.5rem 0rem;
+    padding: 4rem 4rem;
+    .exit{
+        position: relative;
+        top:10rem;
+        font-size: 1.5rem;
         cursor: pointer;
-        :active{
-            color:orange;
-        }
+    }
+    .active{
+        color:#d3570f;
+    }
+    .item{
+        padding: 1.5rem 0rem;
+        cursor:pointer;
     }
     .logo{
         padding: 3rem 1rem;
@@ -48,6 +60,7 @@ const Container = styled.div`
 
     @media (max-width:768px){
         display: none;
+        width: 100%;
 
     }
     .sidebarItems{
