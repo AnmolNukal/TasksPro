@@ -15,7 +15,6 @@ function Tab() {
     </Container>
 }
 const Container = styled.div`
-    background-color: red;
     padding-bottom: 1rem;
     .items{
         padding-right: 3rem;

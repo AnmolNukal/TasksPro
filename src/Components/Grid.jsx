@@ -1,14 +1,17 @@
 import styled from "styled-components";
 import Tab from "./Grid-items/Tab";
 import Cards from "./Grid-items/Cards";
+import People from "./Grid-items/People"
+import Stats from "./Grid-items/Stats";
+import Perf from "./Grid-items/Perf";
 
 function Grid() {
     return <Container>
         <div className="tab"><Tab /></div>
-        <div className="people">PEOPLE</div>
+        <div className="people"><People></People></div>
         <div className="cards"><Cards /></div>
-        <div className="perfomance">PERF</div>
-        <div className="stats">STATS</div>
+        <div className="perfomance"><Perf /></div>
+        <div className="stats"><Stats /></div>
         <div className="projectSchedule">PRO</div>
     </Container>
 
@@ -19,7 +22,7 @@ const Container = styled.div`
     display: grid;
     grid-template-columns: repeat(8,1fr);
     grid-auto-rows: minmax(80px,auto);
-    grid-gap: 1rem;
+    grid-gap: 0.7rem;
     .tab{
         grid-column : span 6;
         grid-row : span 1;
@@ -27,18 +30,16 @@ const Container = styled.div`
     .people{
         grid-column : span 2;
         grid-row : span 3;
-        background-color:purple;
+       
     }
     .cards{
         grid-column: span 6 ;
         grid-row : span 4;
-        background-color:grey;
     }
     
     .stats{
         grid-column: span 6 ;
         grid-row : span 1;
-        background-color:green;
     } 
     .projectSchedule{
         grid-column: span 6 ;
@@ -48,7 +49,6 @@ const Container = styled.div`
     .perfomance{
         grid-column: span 2 ;
         grid-row : span 5;
-        background-color:blue;
     }
     @media (max-width:768px){
         .tab{
