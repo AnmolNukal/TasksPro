@@ -21,7 +21,7 @@ const Container = styled.div`
         cursor:pointer;
     }
     .active{
-        color:white;
+        color:#d3570f;
     }
     .logo{
         font-size: 2.5rem;
@@ -33,12 +33,12 @@ const Container = styled.div`
         align-items: center;
         flex-direction: column;
         .logo{
-            font-size: 1.3rem;
+            font-size: 2.3rem;
         }
         .items{
             padding:0;
-            font-size: 0.7rem;
-            padding-right: 0.5rem;
+            padding-right: 0.8rem;
+            font-size: 0.8rem;
         }
         .itemList{
             display: flex;

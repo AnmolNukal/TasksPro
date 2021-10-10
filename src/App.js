@@ -4,6 +4,7 @@ import Search from "./Components/Search";
 import Grid from "./Components/Grid";
 import styled from "styled-components";
 
+
 function App() {
   return (
     <div className="App">
@@ -20,7 +21,7 @@ function App() {
 
 const Container = styled.div`
       display: flex;
-      background-color: #DCDCDC;
+      background:linear-gradient(to right top,#65dfc9,#6cdbeb);
       .gridArea{
         display: inline;
         width: 100%;

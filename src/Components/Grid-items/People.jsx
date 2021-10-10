@@ -17,8 +17,11 @@ function People() {
     </Container>
 }
 const Container = styled.div`
+    border-radius: 1.2rem;
     display: flex;
+    padding: 1rem 1rem;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     .focused{
         display: flex;
@@ -34,10 +37,10 @@ const Container = styled.div`
     }
     .listImages{
         border-radius: 50%;
-        margin-right: 1rem;
+        margin-left:0.7rem ;
     }
     .list{
-        margin-left: 0.7rem;
+        
     }
 `
 export default People;

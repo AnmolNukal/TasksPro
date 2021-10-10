@@ -20,18 +20,23 @@ function Cards() {
     </Container>
 }
 const Container = styled.div`
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
     display: flex;
     .imgItem{
         border-radius:2rem;
         margin-right:3rem;
     }
     @media (max-width:786px){
+        margin-top:1rem;
+        width: 91%;
+        margin-bottom: 0rem;
         .imgItem{
-            width: 120px;
-            height: 200px;
+            width: 7rem;
+            height: 9rem;
             border-radius:1rem;
             margin-right:1rem;
+            overflow: hidden;
         }
     }
 `

@@ -24,6 +24,7 @@ function Stats() {
 const Container = styled.div`
     display: flex;
     margin-top:1rem;
+    margin-bottom: 1rem;
     align-items: center;
     .stat{
         display: flex;
@@ -44,10 +45,9 @@ const Container = styled.div`
             padding:1rem 0.5rem;
             margin:0 0 1rem 0;
             display: flex;
-            justify-content: center;
-            text-align: left;
+            justify-content: space-around;
         }
-    }
+    }   
 
 `
 export default Stats;

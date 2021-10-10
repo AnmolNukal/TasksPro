@@ -4,6 +4,7 @@ import Cards from "./Grid-items/Cards";
 import People from "./Grid-items/People"
 import Stats from "./Grid-items/Stats";
 import Perf from "./Grid-items/Perf";
+import ProjectSchedule from "./Grid-items/ProjectSchedule";
 
 function Grid() {
     return <Container>
@@ -12,7 +13,7 @@ function Grid() {
         <div className="cards"><Cards /></div>
         <div className="perfomance"><Perf /></div>
         <div className="stats"><Stats /></div>
-        <div className="projectSchedule">PRO</div>
+        <div className="projectSchedule"><ProjectSchedule /></div>
     </Container>
 
 }
@@ -44,7 +45,6 @@ const Container = styled.div`
     .projectSchedule{
         grid-column: span 6 ;
         grid-row : span 2;
-        background-color:yellow;
     }
     .perfomance{
         grid-column: span 2 ;
